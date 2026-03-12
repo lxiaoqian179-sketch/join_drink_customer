@@ -1,0 +1,121 @@
+.logo-img {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fafcff;
+  padding: 12px 0 12px 32px;
+  box-sizing: border-baox;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: #ff6600;
+  letter-spacing: 2px;
+}
+.logo-text {
+  color: #ff6600;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-style: italic;
+}
+.logo-sub {
+  color: #ff6600;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-left: 2px;
+  letter-spacing: 0;
+}
+
+.header-search-group {
+  display: flex;
+  align-items: center;
+  background: #f3f7fa;
+  border-radius: 2em;
+  padding: 0 16px;
+  margin-left: 32px;
+  flex: 1 1 0;
+  max-width: 700px;
+  min-width: 350px;
+}
+.header-location {
+  display: flex;
+  align-items: center;
+  color: #a0b0c0;
+  font-size: 1rem;
+  margin-right: 16px;
+  gap: 6px;
+}
+.header-location i {
+  font-size: 1.1rem;
+}
+.header-search-bar {
+  display: flex;
+  align-items: center;
+  color: #a0b0c0;
+  flex: 1;
+  gap: 8px;
+  border-left: 1px solid #e0e6ed;
+  padding-left: 16px;
+}
+.header-search-bar i {
+  font-size: 1.1rem;
+}
+.header-search-bar input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 1rem;
+  color: #6a7a8c;
+  width: 260px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-left: 32px;
+}
+.header-actions i {
+  color: #3a4652;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.header-actions i:hover {
+  color: #ff6600;
+}
+.logout-btn {
+  background: #ff6600;
+  color: #fff;
+  border: none;
+  border-radius: 1.2em;
+  padding: 7px 22px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.logout-btn:hover {
+  background: #e65c00;
+}
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 10px;
+  border: 2px solid #f3f7fa;
+}
+
+

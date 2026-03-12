@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brew & Belle Café</title>
+    <link rel="stylesheet" href="../CSS/home.css">
+    <!-- 手寫英文字體連結 -->
+    <link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- 關於品牌:中文內文-->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+<!-- 導覽列 -->
+<header class="navbar">
+
+    <!-- 左上角logo -->
+    <div class="logo">
+        <a href="../html/home.html">
+            <img src="../img/logo-horizontal-06.png" alt="Brew & Belle Café Logo">
+        </a>
+    </div>
+
+    <!-- 桌機版選單 -->
+    <nav aria-label="主選單">
+        <ul class="nav-links">
+            <li><a href="../html/about.html">Story</a></li>
+            <li><a href="../html/menu.html">Menu</a></li>
+            <li><a href="../html/news.html">News</a></li>
+            <!-- <li><a href="../html/contact.html">Contact</a></li> -->
+        </ul>
+    </nav>
+
+    <!-- 漢堡按鈕（手機版顯示） -->
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+</header>
+
+<!-- 手機版滑出選單（header 外） -->
+<ul class="mobile-menu">
+    <li><a href="../html/about.html">Story</a></li>
+    <li><a href="../html/menu.html">Menu</a></li>
+    <li><a href="../html/news.html">News</a></li>
+    <li><a href="../html/contact.html">Contact</a></li>
+</ul>
+
+
+    <!-- Hero 大圖區 -->
+    <section class="hero">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="../video/home-hero.mp4" type="video/mp4">
+        </video>
+
+        <div class="hero-text">
+            <h1 class="fade-up">Brewed with grace.
+                <br>
+                Savored with a touch of happiness.
+            </h1>
+        </div>
+    </section>
+
+    <main class="home-main">
+
+        <!-- popular前三名精選商品區 -->
+        <section id="popularTop" class="popular-section" data-category="popular">
+            <br><br><br>
+            <h2>Top Favorites</h2>
+            <p class="desc">― 匯集最受青睞的人氣品項，每一道都以細膩工法展現迷人的風味層次 ―</p>
+            <div class="popular-grid">
+
+                <div class="popular-item">
+                    <div class="img-box"><img src="../img/home/coffee-affogato.jpg" alt="咖啡"></div>
+                    <h4>Top 1</h4>
+                    <h5>阿芙佳朵</h5>
+                    <p>Affogato</p>
+                </div>
+
+                <div class="popular-item">
+                    <div class="img-box"><img src="../img/home/pasta-clams.jpg" alt="咖啡"></div>
+                    <h4>Top 2</h4>
+                    <h5>白酒蛤蜊蒜香義大利麵</h5>
+                    <p>White Wine Vongole Pasta</p>
+                </div>
+
+                <div class="popular-item">
+                    <div class="img-box"><img src="../img/home/pizza-arugula.jpg" alt="咖啡"></div>
+                    <h4>Top 3</h4>
+                    <h5>義式帕瑪火腿芝麻葉披薩</h5>
+                    <p>Prosciutto & Arugula Pizza</p>
+                </div>
+            </div>
+            <br><br><br>
+        </section>
+
+
+        <!-- About區 -->
+        <section class="about-menu">
+            <section class="about">
+                <div class="about-wrapper" role="region" aria-labelledby="about-title">
+
+                    <!-- About文字區塊 -->
+                    <div class="about-text">
+                        <h2>About <br> Brew & Belle Café </h2>
+                        <p>
+                            在 Brew & Belle Café，
+                            我們相信，美好的一天，始於一杯被用心對待的咖啡。
+                        </p>
+                        <p>
+                            Brew，象徵一份專注與職人精神；
+                            Belle，代表優雅、柔和、讓人願意停下腳步的美好。
+                            兩者交織，構成我們想帶給每位客人的日常風景──
+                            一個能讓感受變得細緻、時間流動得更溫柔的地方。
+                        </p>
+                        <p>
+                            我們以精品咖啡為主角，選用不同產地與烘焙層次，
+                            在手沖的蒸氣與義式的香氣中，呈現每顆咖啡豆的靈魂。
+                            同時，也端上精緻的輕食料理：現烤披薩、溫暖義大利麵、
+                            以及香氣迷人的手作炸物，陪伴你的每一次停留。
+                            因為我們相信，一杯好咖啡，值得一份能讓心滿足的美味搭配。
+                        </p>
+                        <br>
+                        <a href="../html/about.html" class="about-btn">Read more</a>
+                        <br><br>
+
+                    </div>
+
+                    <!-- About圖片區塊 -->
+                    <div class="about-images">
+
+                        <!-- 前景主圖 -->
+                        <img src="../img/home/about-main.jpg" class="img-front" alt="咖啡主圖">
+
+                    </div>
+                </div>
+
+            </section>
+
+
+
+
+            <!-- --------------menu產品分類輪播圖-------------- -->
+            <section class="menu-slider">
+
+                <!-- 左箭頭 -->
+                <button class="slider-btn prev">&#10094;</button>
+
+                <div class="slider-track">
+
+                    <!-- 1. 咖啡 -->
+                    <a href="menu.html#menu-coffee" class="card tall">
+                        <img src="../img/menu/menu-coffee.png" alt="Coffee">
+                        <p>―精選咖啡 Coffee―</p>
+
+
+                    </a>
+
+                    <!-- 2. 茶飲 -->
+                    <a href="menu.html#menu-drinks" class="card short">
+                        <img src="../img/menu/menu-drinks.jpg" alt="Juice & Tea">
+                        <p>―果汁與茶飲 Juice & Tea―</p>
+
+                    </a>
+
+                    <!-- 3. 主食套餐 -->
+                    <a href="menu.html#menu-pasta" class="card tall">
+                        <img src="../img/menu/menu-pasta.jpg" alt="Pasta & Risotto">
+                        <p>―義大利麵與燉飯 Pasta & Risotto―</p>
+
+                    </a>
+
+                    <!-- 4. 披薩 -->
+                    <a href="menu.html#menu-pizza" class="card short">
+                        <img src="../img/menu/menu-pizza.jpg" alt="Pizza">
+                        <p>―手工披薩 Pizza―</p>
+
+                    </a>
+
+                    <!-- 5. 甜點 -->
+                    <a href="menu.html#menu-dessert" class="card tall">
+                        <img src="../img/menu/menu-dessert.png" alt="Dessert">
+                        <p>―甜點 Dessert―</p>
+                    </a>
+
+                    <!-- 6. 小點心 -->
+                    <a href="menu.html#menu-fries" class="card short">
+                        <img src="../img/menu/menu-fries.png" alt="Savory Bites">
+                        <p>―佐味小點 Savory Bites―</p>
+
+                    </a>
+
+                </div>
+
+                <!-- 右箭頭 -->
+                <button class="slider-btn next">&#10095;</button>
+                <!-- 查看所有品項按鈕 -->
+                <div class="menu-view-all">
+                    <a href="menu.html#menu-all" class="view-all-btn">查看所有品項</a>
+                </div>
+
+            </section>
+        </section>
+
+
+        <!-- ======最新消息區塊 ====== -->
+        <section class="news">
+            <div class="news-inner">
+                <!-- news文字區塊 -->
+                <div class="news-content">
+                    <br><br>
+                    <h2>New Moments Await</h2>
+
+                    <p>
+                        在 Brew & Belle Café，我們相信，每一次推出新品、每一場活動、每一次被媒體記錄的瞬間，
+                        都代表著我們與你之間新的連結。最新消息頁面，希望成為你與我們保持互動的地方──
+                        無論是季節限定飲品、期間活動，或是讓我們備感榮幸的媒體報導，都會在這裡第一時間與你分享。
+                    </p>
+
+
+                    <!-- 跳轉至最新消息按鈕 -->
+                    <div class="news-all">
+                        <a href="../html/news.html" class="news-all-btn">Read More</a>
+                    </div>
+
+
+                </div>
+
+                <!-- news圖片區塊 -->
+                <div class="news-images">
+                    <!-- 前景主圖 -->
+                    <img src="../img/home/news.jpg" class="news-front" alt="最新消息">
+                </div>
+            </div>
+
+
+        </section>
+
+
+        <!-- 聯絡我們 影片大圖區 -->
+        <section class="contact">
+            <video autoplay muted loop playsinline class="contact-video">
+                <source src="../video/home-contact.mp4" type="video/mp4">
+            </video>
+
+            <div class="contact-text">
+                <h1 class="fade-up">Contact Brew & Belle Café</h1>
+                <p>若您想與Brew & Belle Café分享想法或是回饋，我們將會很樂意傾聽您的每一句話......</p>
+            </div>
+
+            <!-- 聯絡我們按鈕 -->
+            <div class="contact-view-all">
+                <a href="../html/contact.html" class="contact-all-btn">Contact us</a>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- ===== 回到人氣商品 按鈕 ===== -->
+    <div class="back-to-top">
+        <button onclick="scrollToPopularTop()">Top ⭡</button>
+    </div>
+
+    <!-- 頁尾區塊 -->
+    <footer class="footer">
+
+
+
+        <!-- 頁尾的店名 -->
+        <div class="footer-content">
+            <img src="../img/logo-white.png">
+
+        </div>
+
+        <!-- 頁尾聯絡資訊 -->
+        <div class="footer-info">
+            <p>Line │ Brewbellecafe2023&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Tel │ 04-2280-5202&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                統編 │ 22805204&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                地址 │ 台中市北區咖啡一路 88 號
+            </p>
+        </div>
+
+        <div class="footer-copy">
+            © 2023 Brew & Belle Café. All rights reserved.
+        </div>
+
+        </div>
+
+    </footer>
+
+    <!-- JS連結 -->
+    <script src="../JS/home.js"></script>
+
+
+</body>
+
+</html>
