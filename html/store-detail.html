@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>JOIN 揪飲</title>
+
+<link rel="stylesheet" href="../css/pages/index.css">
+<link rel="stylesheet" href="../css/pages/store.css">
+
+<!-- icon -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- 地圖 -->
+<link rel="stylesheet"
+href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- Header CSS -->
+<link rel="stylesheet" href="../css/components/header.css">
+
+<!-- Footer CSS -->
+<link rel="stylesheet" href="../css/components/footer.css">
+
+</head>
+
+<body>
+<!-- 頁首logo -->
+<header class="main-header">
+	<div class="header-logo">
+		<img src="../images/logo.png" alt="JOIN 揪飲 LOGO" class="logo-img">
+	</div>
+
+<!-- 頁首定位欄與搜尋欄位 -->
+	<div class="header-search-group">
+		<div class="header-location">
+			<i class="fa-solid fa-location-dot"></i>
+			<span>信義路五段7號</span>
+		</div>
+
+		<div class="header-search-bar">
+			<i class="fa-solid fa-magnifying-glass"></i>
+			<input type="text" placeholder="搜尋想喝的飲料、店家…">
+		</div>
+	</div>
+
+  <!-- 頁首icons -->
+
+	<div class="header-actions">
+		<i class="fa-regular fa-bell"></i>
+		<i class="fa-solid fa-clock-rotate-left"></i>
+		<i class="fa-solid fa-cart-shopping"></i>
+		<i class="fa-solid fa-heart"></i>
+
+		<button class="logout-btn">登出</button>
+
+		<img class="avatar"
+		src="https://i.pravatar.cc/40"
+		alt="avatar">
+	</div>
+</header>
+
+<section class="store-nav-tabs">
+  <div class="container">
+    <nav class="tabs">
+      <button class="tab active">門市</button>
+      <button class="tab">商品</button>
+      <button class="tab">品牌</button>
+    </nav>
+  </div>
+</section>
+
+<section class="store-detail">
+  <div class="store-banner" style="background-image:url('../images/store-banner.jpg');">
+    <div class="banner-overlay"></div>
+    <div class="container banner-content">
+      <div class="store-info-left">
+        <div class="store-logo">
+          <img src="../images/store.jpg" alt="迷客夏 臺中十甲店">
+        </div>
+        <div class="store-meta">
+          <h1>迷客夏 臺中十甲店</h1>
+          <div class="meta-row">
+            <span class="rating"><i class="fa-solid fa-star"></i>4.8</span>
+            <span class="dot"></span>
+            <span class="hours">09:00 - 21:00</span>
+            <span class="dot"></span>
+            <span class="distance">約 1.7 公里</span>
+          </div>
+          <div class="meta-row">
+            <span class="address"><i class="fa-solid fa-location-dot"></i>臺中市東區十甲路123號</span>
+            <span class="phone"><i class="fa-solid fa-phone"></i>04-22760993</span>
+          </div>
+        </div>
+      </div>
+      <div class="store-actions">
+        <button class="btn-outline">往下展開：品牌介紹</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container store-layout">
+    <aside class="store-sidebar">
+      <div class="sidebar-title">菜單分類</div>
+      <ul class="category-list">
+        <li class="category-item active">熱銷新品</li>
+        <li class="category-item">愛茶的牛</li>
+        <li class="category-item">鮮果果茶</li>
+        <li class="category-item">珍珠鮮奶</li>
+        <li class="category-item">靜岡綠茶</li>
+      </ul>
+    </aside>
+
+    <main class="store-products">
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-image">
+            <img src="../images/store.jpg" alt="桂香原片青">
+            <div class="product-badge">熱銷</div>
+          </div>
+          <div class="product-content">
+            <h3>桂香原片青</h3>
+            <p>帶有淡淡桂花香的清爽茉莉茶</p>
+            <div class="product-meta">
+              <span class="product-price"><span class="price-symbol">$</span>50</span>
+              <button class="btn-add"><i class="fa-solid fa-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="../images/store.jpg" alt="爆杯紅茶">
+            <div class="product-badge">熱銷</div>
+          </div>
+          <div class="product-content">
+            <h3>爆杯紅茶</h3>
+            <p>斯里蘭卡林姆紅茶，香氣回甘</p>
+            <div class="product-meta">
+              <span class="product-price"><span class="price-symbol">$</span>55</span>
+              <button class="btn-add"><i class="fa-solid fa-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="../images/store.jpg" alt="大甲芋頭鮮奶">
+            <div class="product-badge">熱銷</div>
+          </div>
+          <div class="product-content">
+            <h3>大甲芋頭鮮奶</h3>
+            <p>手工熬煮大甲芋頭，綿密濃郁</p>
+            <div class="product-meta">
+              <span class="product-price"><span class="price-symbol">$</span>75</span>
+              <button class="btn-add"><i class="fa-solid fa-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="../images/store.jpg" alt="鹿野高山青茶">
+            <div class="product-badge">新品</div>
+          </div>
+          <div class="product-content">
+            <h3>鹿野高山青茶</h3>
+            <p>高山茶香，茶湯清爽回甘</p>
+            <div class="product-meta">
+              <span class="product-price"><span class="price-symbol">$</span>65</span>
+              <button class="btn-add"><i class="fa-solid fa-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="../images/store.jpg" alt="伯爵紅茶鮮奶">
+            <div class="product-badge">新品</div>
+          </div>
+          <div class="product-content">
+            <h3>伯爵紅茶鮮奶</h3>
+            <p>佛手柑香氣，融合鮮奶更滑順</p>
+            <div class="product-meta">
+              <span class="product-price"><span class="price-symbol">$</span>65</span>
+              <button class="btn-add"><i class="fa-solid fa-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="../images/store.jpg" alt="焙茶鮮乳">
+            <div class="product-badge">新品</div>
+          </div>
+          <div class="product-content">
+            <h3>焙茶鮮乳</h3>
+            <p>靜岡焙茶，低咖啡因且香氣馥郁</p>
+            <div class="product-meta">
+              <span class="product-price"><span class="price-symbol">$</span>70</span>
+              <button class="btn-add"><i class="fa-solid fa-plus"></i></button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+</section>
+
+<!-- 頁尾區域 -->
+<footer class="main-footer">
+  <div class="footer-content">
+
+<div class="footer-left">
+  <img src="../images/logo.png" alt="JOIN 揪飲 LOGO" class="footer-logo">
+
+  <div class="footer-desc">
+    最懂你的飲品揪團平台。<br>
+    不管是辦公室下午茶，還是好友聚會，<br>
+    一鍵發起，輕鬆揪飲！
+  </div>
+</div>
+
+<div class="footer-right">
+
+  <div class="footer-contact-title">
+    聯絡我們
+  </div>
+
+  <div class="footer-contact-list">
+
+    <div class="footer-contact-item">
+      <i class="fa-regular fa-envelope"></i>
+      join_drink@gmail.com
+    </div>
+
+    <div class="footer-contact-item">
+      <i class="fa-solid fa-phone"></i>
+      04-1234-5678
+    </div>
+
+    <div class="footer-contact-item">
+      <i class="fa-solid fa-location-dot"></i>
+      408臺中市南屯區公益路二段51號18樓
+    </div>
+
+  </div>
+
+</div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 JOIN 揪飲 - 本平台供飲品揪團平台. All Rights Reserved.
+  </div>
+
+</footer>
+
+
+
+<!-- JS部分，之後視情況拆分檔案 -->
+<script>
+(function(){
+  const categories = document.querySelectorAll('.category-item');
+
+  categories.forEach(item => {
+    item.addEventListener('click', () => {
+      categories.forEach(i => i.classList.remove('active'));
+      item.classList.add('active');
+      // TODO: 依照 category-id 或 data-attribute 篩選商品
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
+
+  

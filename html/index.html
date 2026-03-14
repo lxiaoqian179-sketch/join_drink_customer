@@ -1,305 +1,384 @@
+
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brew & Belle Café</title>
-    <link rel="stylesheet" href="../CSS/home.css">
-    <!-- 手寫英文字體連結 -->
-    <link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- 關於品牌:中文內文-->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500&display=swap" rel="stylesheet">
+<title>JOIN 揪飲</title>
+
+<link rel="stylesheet" href="../css/pages/index.css">
+
+<!-- icon -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- 地圖 -->
+<link rel="stylesheet"
+href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- Header CSS -->
+<link rel="stylesheet" href="../css/components/header.css">
+
+<!-- Footer CSS -->
+<link rel="stylesheet" href="../css/components/footer.css">
 
 </head>
 
-
 <body>
-<!-- 導覽列 -->
-<header class="navbar">
+<!-- 頁首logo -->
+<header class="main-header">
+	<div class="header-logo">
+		<img src="../images/logo.png" alt="JOIN 揪飲 LOGO" class="logo-img">
+	</div>
 
-    <!-- 左上角logo -->
-    <div class="logo">
-        <a href="../html/home.html">
-            <img src="../img/logo-horizontal-06.png" alt="Brew & Belle Café Logo">
-        </a>
-    </div>
+<!-- 頁首定位欄與搜尋欄位 -->
+	<div class="header-search-group">
+		<div class="header-location">
+			<i class="fa-solid fa-location-dot"></i>
+			<span>信義路五段7號</span>
+		</div>
 
-    <!-- 桌機版選單 -->
-    <nav aria-label="主選單">
-        <ul class="nav-links">
-            <li><a href="../html/about.html">Story</a></li>
-            <li><a href="../html/menu.html">Menu</a></li>
-            <li><a href="../html/news.html">News</a></li>
-            <!-- <li><a href="../html/contact.html">Contact</a></li> -->
-        </ul>
-    </nav>
+		<div class="header-search-bar">
+			<i class="fa-solid fa-magnifying-glass"></i>
+			<input type="text" placeholder="搜尋想喝的飲料、店家…">
+		</div>
+	</div>
 
-    <!-- 漢堡按鈕（手機版顯示） -->
-    <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
+  <!-- 頁首icons -->
 
+	<div class="header-actions">
+		<i class="fa-regular fa-bell"></i>
+		<i class="fa-solid fa-clock-rotate-left"></i>
+		<i class="fa-solid fa-cart-shopping"></i>
+		<i class="fa-solid fa-heart"></i>
+
+		<button class="logout-btn">登出</button>
+
+		<img class="avatar"
+		src="https://i.pravatar.cc/40"
+		alt="avatar">
+	</div>
 </header>
 
-<!-- 手機版滑出選單（header 外） -->
-<ul class="mobile-menu">
-    <li><a href="../html/about.html">Story</a></li>
-    <li><a href="../html/menu.html">Menu</a></li>
-    <li><a href="../html/news.html">News</a></li>
-    <li><a href="../html/contact.html">Contact</a></li>
+
+<!-- 輪播 banner -->
+<section class="banner-carousel">
+  <div class="carousel-container">
+    <button class="carousel-arrow left-arrow">&#10094;</button>
+    <div class="carousel-track">
+      <div class="carousel-item"><img src="../images/banner1.jpg" alt="banner1"></div>
+      <div class="carousel-item"><img src="../images/banner2.jpg" alt="banner2"></div>
+      <div class="carousel-item"><img src="../images/banner3.jpg" alt="banner3"></div>
+      <div class="carousel-item"><img src="../images/banner4.jpg" alt="banner4"></div>
+      <div class="carousel-item"><img src="../images/banner5.jpg" alt="banner5"></div>
+    </div>
+    <button class="carousel-arrow right-arrow">&#10095;</button>
+  </div>
+</section>
+
+<!-- 導覽列 按鈕 -->
+<section class="quick-nav">
+  <div class="container">
+    <ul class="nav-list">
+
+  <li class="nav-item">
+    <i class="fa-solid fa-motorcycle"></i>
+    <span>追蹤訂單</span>
+  </li>
+
+  <li class="nav-item">
+    <i class="fa-regular fa-clock"></i>
+    <span>最近點過</span>
+  </li>
+
+  <li class="nav-item">
+    <i class="fa-solid fa-heart"></i>
+    <span>收藏店家</span>
+  </li>
+
+  <li class="nav-item">
+    <i class="fa-solid fa-ticket"></i>
+    <span>優惠券</span>
+  </li>
+
+  <li class="nav-item">
+    <i class="fa-solid fa-user"></i>
+    <span>個人中心</span>
+  </li>
+
 </ul>
+  </div>
+</section>
 
 
-    <!-- Hero 大圖區 -->
-    <section class="hero">
-        <video autoplay muted loop playsinline class="hero-video">
-            <source src="../video/home-hero.mp4" type="video/mp4">
-        </video>
+<!-- 附近店家卡片 -->
+<section class="store-section">
 
-        <div class="hero-text">
-            <h1 class="fade-up">Brewed with grace.
-                <br>
-                Savored with a touch of happiness.
-            </h1>
-        </div>
-    </section>
+<div class="container">
 
-    <main class="home-main">
+<h2 class="section-title">
+附近熱門店家
+</h2>
 
-        <!-- popular前三名精選商品區 -->
-        <section id="popularTop" class="popular-section" data-category="popular">
-            <br><br><br>
-            <h2>Top Favorites</h2>
-            <p class="desc">― 匯集最受青睞的人氣品項，每一道都以細膩工法展現迷人的風味層次 ―</p>
-            <div class="popular-grid">
+<div class="store-grid">
 
-                <div class="popular-item">
-                    <div class="img-box"><img src="../img/home/coffee-affogato.jpg" alt="咖啡"></div>
-                    <h4>Top 1</h4>
-                    <h5>阿芙佳朵</h5>
-                    <p>Affogato</p>
-                </div>
+<div class="store-card">
+  <div class="store-image">
+    <img src="../images/store.jpg" alt="五十嵐 - 台北車站店">
+    <div class="store-badge">50嵐</div>
+    <div class="store-rating"><i class="fa-solid fa-star"></i>4.8 <span>(500+)</span></div>
+  </div>
+  <div class="store-info">
+    <h3>五十嵐 - 台北車站店</h3>
+    <div class="store-meta">
+      <div class="store-meta-left">
+        <span class="meta-item"><i class="fa-solid fa-location-dot"></i>0.5km</span>
+        <span class="meta-item"><i class="fa-regular fa-clock"></i>09:00 ~ 21:00</span>
+      </div>
+      <div class="store-flag">可外送</div>
+    </div>
+  </div>
+</div>
 
-                <div class="popular-item">
-                    <div class="img-box"><img src="../img/home/pasta-clams.jpg" alt="咖啡"></div>
-                    <h4>Top 2</h4>
-                    <h5>白酒蛤蜊蒜香義大利麵</h5>
-                    <p>White Wine Vongole Pasta</p>
-                </div>
+<div class="store-card">
+  <div class="store-image">
+    <img src="../images/store.jpg" alt="迷客夏 Milksha - 中正店">
+    <div class="store-badge">迷客夏</div>
+    <div class="store-rating"><i class="fa-solid fa-star"></i>4.9 <span>(1.2k)</span></div>
+  </div>
+  <div class="store-info">
+    <h3>迷客夏 Milksha - 中正店</h3>
+    <div class="store-meta">
+      <div class="store-meta-left">
+        <span class="meta-item"><i class="fa-solid fa-location-dot"></i>1.2km</span>
+        <span class="meta-item"><i class="fa-regular fa-clock"></i>09:30 ~ 21:00</span>
+      </div>
+      <div class="store-flag">可外送</div>
+    </div>
+  </div>
+</div>
 
-                <div class="popular-item">
-                    <div class="img-box"><img src="../img/home/pizza-arugula.jpg" alt="咖啡"></div>
-                    <h4>Top 3</h4>
-                    <h5>義式帕瑪火腿芝麻葉披薩</h5>
-                    <p>Prosciutto & Arugula Pizza</p>
-                </div>
-            </div>
-            <br><br><br>
-        </section>
+<div class="store-card">
+  <div class="store-image">
+    <img src="../images/store.jpg" alt="天仁茗茶 CHAFFEE">
+    <div class="store-badge">天仁茗茶</div>
+    <div class="store-rating"><i class="fa-solid fa-star"></i>4.6 <span>(320)</span></div>
+  </div>
+  <div class="store-info">
+    <h3>天仁茗茶 CHAFFEE</h3>
+    <div class="store-meta">
+      <div class="store-meta-left">
+        <span class="meta-item"><i class="fa-solid fa-location-dot"></i>0.8km</span>
+        <span class="meta-item"><i class="fa-regular fa-clock"></i>10:00 ~ 21:00</span>
+      </div>
+      <div class="store-flag">可外送</div>
+    </div>
+  </div>
+</div>
 
+<div class="store-card">
+  <div class="store-image">
+    <img src="../images/store.jpg" alt="五十嵐 - 台北車站店">
+    <div class="store-badge">50嵐</div>
+    <div class="store-rating"><i class="fa-solid fa-star"></i>4.8 <span>(500+)</span></div>
+  </div>
+  <div class="store-info">
+    <h3>五十嵐 - 台北車站店</h3>
+    <div class="store-meta">
+      <div class="store-meta-left">
+        <span class="meta-item"><i class="fa-solid fa-location-dot"></i>0.5km</span>
+        <span class="meta-item"><i class="fa-regular fa-clock"></i>09:00 ~ 21:00</span>
+      </div>
+      <div class="store-flag">可外送</div>
+    </div>
+  </div>
+</div>
 
-        <!-- About區 -->
-        <section class="about-menu">
-            <section class="about">
-                <div class="about-wrapper" role="region" aria-labelledby="about-title">
+<div class="store-card">
+  <div class="store-image">
+    <img src="../images/store.jpg" alt="迷客夏 Milksha - 中正店">
+    <div class="store-badge">迷客夏</div>
+    <div class="store-rating"><i class="fa-solid fa-star"></i>4.9 <span>(1.2k)</span></div>
+  </div>
+  <div class="store-info">
+    <h3>迷客夏 Milksha - 中正店</h3>
+    <div class="store-meta">
+      <div class="store-meta-left">
+        <span class="meta-item"><i class="fa-solid fa-location-dot"></i>1.2km</span>
+        <span class="meta-item"><i class="fa-regular fa-clock"></i>09:30 ~ 21:00</span>
+      </div>
+      <div class="store-flag">可外送</div>
+    </div>
+  </div>
+</div>
 
-                    <!-- About文字區塊 -->
-                    <div class="about-text">
-                        <h2>About <br> Brew & Belle Café </h2>
-                        <p>
-                            在 Brew & Belle Café，
-                            我們相信，美好的一天，始於一杯被用心對待的咖啡。
-                        </p>
-                        <p>
-                            Brew，象徵一份專注與職人精神；
-                            Belle，代表優雅、柔和、讓人願意停下腳步的美好。
-                            兩者交織，構成我們想帶給每位客人的日常風景──
-                            一個能讓感受變得細緻、時間流動得更溫柔的地方。
-                        </p>
-                        <p>
-                            我們以精品咖啡為主角，選用不同產地與烘焙層次，
-                            在手沖的蒸氣與義式的香氣中，呈現每顆咖啡豆的靈魂。
-                            同時，也端上精緻的輕食料理：現烤披薩、溫暖義大利麵、
-                            以及香氣迷人的手作炸物，陪伴你的每一次停留。
-                            因為我們相信，一杯好咖啡，值得一份能讓心滿足的美味搭配。
-                        </p>
-                        <br>
-                        <a href="../html/about.html" class="about-btn">Read more</a>
-                        <br><br>
+<div class="store-card">
+  <div class="store-image">
+    <img src="../images/store.jpg" alt="天仁茗茶 CHAFFEE">
+    <div class="store-badge">天仁茗茶</div>
+    <div class="store-rating"><i class="fa-solid fa-star"></i>4.6 <span>(320)</span></div>
+  </div>
+  <div class="store-info">
+    <h3>天仁茗茶 CHAFFEE</h3>
+    <div class="store-meta">
+      <div class="store-meta-left">
+        <span class="meta-item"><i class="fa-solid fa-location-dot"></i>0.8km</span>
+        <span class="meta-item"><i class="fa-regular fa-clock"></i>10:00 ~ 21:00</span>
+      </div>
+      <div class="store-flag">可外送</div>
+    </div>
+  </div>
+</div>
 
-                    </div>
+<div class="store-card">
+  <div class="store-image">
+    <img src="../images/store.jpg" alt="五十嵐 - 台北車站店">
+    <div class="store-badge">50嵐</div>
+    <div class="store-rating"><i class="fa-solid fa-star"></i>4.8 <span>(500+)</span></div>
+  </div>
+  <div class="store-info">
+    <h3>五十嵐 - 台北車站店</h3>
+    <div class="store-meta">
+      <div class="store-meta-left">
+        <span class="meta-item"><i class="fa-solid fa-location-dot"></i>0.5km</span>
+        <span class="meta-item"><i class="fa-regular fa-clock"></i>09:00 ~ 21:00</span>
+      </div>
+      <div class="store-flag">可外送</div>
+    </div>
+  </div>
+</div>
 
-                    <!-- About圖片區塊 -->
-                    <div class="about-images">
+<div class="store-card">
+  <div class="store-image">
+    <img src="../images/store.jpg" alt="迷客夏 Milksha - 中正店">
+    <div class="store-badge">迷客夏</div>
+    <div class="store-rating"><i class="fa-solid fa-star"></i>4.9 <span>(1.2k)</span></div>
+  </div>
+  <div class="store-info">
+    <h3>迷客夏 Milksha - 中正店</h3>
+    <div class="store-meta">
+      <div class="store-meta-left">
+        <span class="meta-item"><i class="fa-solid fa-location-dot"></i>1.2km</span>
+        <span class="meta-item"><i class="fa-regular fa-clock"></i>09:30 ~ 21:00</span>
+      </div>
+      <div class="store-flag">可外送</div>
+    </div>
+  </div>
+</div>
 
-                        <!-- 前景主圖 -->
-                        <img src="../img/home/about-main.jpg" class="img-front" alt="咖啡主圖">
+<div class="store-card">
+  <div class="store-image">
+    <img src="../images/store.jpg" alt="天仁茗茶 CHAFFEE">
+    <div class="store-badge">天仁茗茶</div>
+    <div class="store-rating"><i class="fa-solid fa-star"></i>4.6 <span>(320)</span></div>
+  </div>
+  <div class="store-info">
+    <h3>天仁茗茶 CHAFFEE</h3>
+    <div class="store-meta">
+      <div class="store-meta-left">
+        <span class="meta-item"><i class="fa-solid fa-location-dot"></i>0.8km</span>
+        <span class="meta-item"><i class="fa-regular fa-clock"></i>10:00 ~ 21:00</span>
+      </div>
+      <div class="store-flag">可外送</div>
+    </div>
+  </div>
+</div>
 
-                    </div>
-                </div>
+</div>
 
-            </section>
+<div class="view-all-wrapper">
+  <a href="store-list.html" class="btn-primary view-all-btn">查看更多</a>
+</div>
 
+</div>
 
-
-
-            <!-- --------------menu產品分類輪播圖-------------- -->
-            <section class="menu-slider">
-
-                <!-- 左箭頭 -->
-                <button class="slider-btn prev">&#10094;</button>
-
-                <div class="slider-track">
-
-                    <!-- 1. 咖啡 -->
-                    <a href="menu.html#menu-coffee" class="card tall">
-                        <img src="../img/menu/menu-coffee.png" alt="Coffee">
-                        <p>―精選咖啡 Coffee―</p>
-
-
-                    </a>
-
-                    <!-- 2. 茶飲 -->
-                    <a href="menu.html#menu-drinks" class="card short">
-                        <img src="../img/menu/menu-drinks.jpg" alt="Juice & Tea">
-                        <p>―果汁與茶飲 Juice & Tea―</p>
-
-                    </a>
-
-                    <!-- 3. 主食套餐 -->
-                    <a href="menu.html#menu-pasta" class="card tall">
-                        <img src="../img/menu/menu-pasta.jpg" alt="Pasta & Risotto">
-                        <p>―義大利麵與燉飯 Pasta & Risotto―</p>
-
-                    </a>
-
-                    <!-- 4. 披薩 -->
-                    <a href="menu.html#menu-pizza" class="card short">
-                        <img src="../img/menu/menu-pizza.jpg" alt="Pizza">
-                        <p>―手工披薩 Pizza―</p>
-
-                    </a>
-
-                    <!-- 5. 甜點 -->
-                    <a href="menu.html#menu-dessert" class="card tall">
-                        <img src="../img/menu/menu-dessert.png" alt="Dessert">
-                        <p>―甜點 Dessert―</p>
-                    </a>
-
-                    <!-- 6. 小點心 -->
-                    <a href="menu.html#menu-fries" class="card short">
-                        <img src="../img/menu/menu-fries.png" alt="Savory Bites">
-                        <p>―佐味小點 Savory Bites―</p>
-
-                    </a>
-
-                </div>
-
-                <!-- 右箭頭 -->
-                <button class="slider-btn next">&#10095;</button>
-                <!-- 查看所有品項按鈕 -->
-                <div class="menu-view-all">
-                    <a href="menu.html#menu-all" class="view-all-btn">查看所有品項</a>
-                </div>
-
-            </section>
-        </section>
-
-
-        <!-- ======最新消息區塊 ====== -->
-        <section class="news">
-            <div class="news-inner">
-                <!-- news文字區塊 -->
-                <div class="news-content">
-                    <br><br>
-                    <h2>New Moments Await</h2>
-
-                    <p>
-                        在 Brew & Belle Café，我們相信，每一次推出新品、每一場活動、每一次被媒體記錄的瞬間，
-                        都代表著我們與你之間新的連結。最新消息頁面，希望成為你與我們保持互動的地方──
-                        無論是季節限定飲品、期間活動，或是讓我們備感榮幸的媒體報導，都會在這裡第一時間與你分享。
-                    </p>
-
-
-                    <!-- 跳轉至最新消息按鈕 -->
-                    <div class="news-all">
-                        <a href="../html/news.html" class="news-all-btn">Read More</a>
-                    </div>
-
-
-                </div>
-
-                <!-- news圖片區塊 -->
-                <div class="news-images">
-                    <!-- 前景主圖 -->
-                    <img src="../img/home/news.jpg" class="news-front" alt="最新消息">
-                </div>
-            </div>
+</section>
 
 
-        </section>
+<!-- 頁尾區域 -->
+<footer class="main-footer">
+  <div class="footer-content">
 
+<div class="footer-left">
+  <img src="../images/logo.png" alt="JOIN 揪飲 LOGO" class="footer-logo">
 
-        <!-- 聯絡我們 影片大圖區 -->
-        <section class="contact">
-            <video autoplay muted loop playsinline class="contact-video">
-                <source src="../video/home-contact.mp4" type="video/mp4">
-            </video>
+  <div class="footer-desc">
+    最懂你的飲品揪團平台。<br>
+    不管是辦公室下午茶，還是好友聚會，<br>
+    一鍵發起，輕鬆揪飲！
+  </div>
+</div>
 
-            <div class="contact-text">
-                <h1 class="fade-up">Contact Brew & Belle Café</h1>
-                <p>若您想與Brew & Belle Café分享想法或是回饋，我們將會很樂意傾聽您的每一句話......</p>
-            </div>
+<div class="footer-right">
 
-            <!-- 聯絡我們按鈕 -->
-            <div class="contact-view-all">
-                <a href="../html/contact.html" class="contact-all-btn">Contact us</a>
-            </div>
-        </section>
-    </main>
+  <div class="footer-contact-title">
+    聯絡我們
+  </div>
 
+  <div class="footer-contact-list">
 
-    <!-- ===== 回到人氣商品 按鈕 ===== -->
-    <div class="back-to-top">
-        <button onclick="scrollToPopularTop()">Top ⭡</button>
+    <div class="footer-contact-item">
+      <i class="fa-regular fa-envelope"></i>
+      join_drink@gmail.com
     </div>
 
-    <!-- 頁尾區塊 -->
-    <footer class="footer">
+    <div class="footer-contact-item">
+      <i class="fa-solid fa-phone"></i>
+      04-1234-5678
+    </div>
+
+    <div class="footer-contact-item">
+      <i class="fa-solid fa-location-dot"></i>
+      408臺中市南屯區公益路二段51號18樓
+    </div>
+
+  </div>
+
+</div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 JOIN 揪飲 - 本平台供飲品揪團平台. All Rights Reserved.
+  </div>
+
+</footer>
 
 
 
-        <!-- 頁尾的店名 -->
-        <div class="footer-content">
-            <img src="../img/logo-white.png">
-
-        </div>
-
-        <!-- 頁尾聯絡資訊 -->
-        <div class="footer-info">
-            <p>Line │ Brewbellecafe2023&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                Tel │ 04-2280-5202&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                統編 │ 22805204&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                地址 │ 台中市北區咖啡一路 88 號
-            </p>
-        </div>
-
-        <div class="footer-copy">
-            © 2023 Brew & Belle Café. All rights reserved.
-        </div>
-
-        </div>
-
-    </footer>
-
-    <!-- JS連結 -->
-    <script src="../JS/home.js"></script>
-
+<!-- JS部分，之後視情況拆分檔案 -->
+<script>
+(function(){
+  const track = document.querySelector('.carousel-track');
+  const items = Array.from(track.children);
+  const nextBtn = document.querySelector('.right-arrow');
+  const prevBtn = document.querySelector('.left-arrow');
+  let index = 0;
+  const moveTo = (i)=>{
+    track.style.transform = 'translateX(' + (-i * 100) + '%)';
+  };
+  nextBtn.addEventListener('click',()=>{
+    index = (index+1) % items.length;
+    moveTo(index);
+  });
+  prevBtn.addEventListener('click',()=>{
+    index = (index-1+items.length) % items.length;
+    moveTo(index);
+  });
+  // auto play
+  setInterval(()=>{
+    index = (index+1) % items.length;
+    moveTo(index);
+  },4000);
+})();
+</script>
 
 </body>
-
 </html>
+
