@@ -1,0 +1,157 @@
+/* =========================
+   收藏頁整體內容
+========================= */
+
+.account-content{
+  width:100%;
+}
+
+
+/* =========================
+   收藏卡片容器
+========================= */
+
+.favorite-card{
+
+  background:#ffffff;
+  padding: 0 8px;
+  margin-bottom: 30px;
+}
+
+
+/* =========================
+   標題
+========================= */
+
+.favorite-title{
+
+  font-size:26px;
+
+  font-weight:700;
+
+  color:#1e293b;
+
+  /* margin-bottom:6px; */
+
+}
+
+.favorite-desc{
+
+  font-size:14px;
+
+  color:#64748b;
+
+  margin-bottom:26px;
+
+}
+
+
+/* =========================
+   收藏店家 Grid
+========================= */
+
+.favorite-grid{
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:24px;
+
+}
+
+
+/* =========================
+   store-card 尺寸微調
+   (不破壞原有設計)
+========================= */
+
+.favorite-grid .store-card{
+
+  width:100%;
+
+}
+
+
+/* 圖片高度調整 */
+
+.favorite-grid .store-card img{
+
+  height:170px;
+
+}
+
+
+/* =========================
+   Hover 微優化
+========================= */
+
+.favorite-grid .store-card:hover{
+
+  transform:translateY(-6px);
+
+}
+
+
+/* =========================
+   RWD
+========================= */
+
+@media (max-width:1200px){
+
+  .favorite-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+  }
+
+}
+
+@media (max-width:768px){
+
+  .favorite-card{
+
+    padding:24px;
+
+  }
+
+  .favorite-grid{
+
+    grid-template-columns:1fr;
+
+    gap:18px;
+
+  }
+
+}
+
+
+/* =========================
+   若收藏為空
+========================= */
+
+.favorite-empty{
+
+  text-align:center;
+
+  padding:60px 20px;
+
+  color:#94a3b8;
+
+}
+
+.favorite-empty i{
+
+  font-size:48px;
+
+  margin-bottom:14px;
+
+  color:#cbd5e1;
+
+}
+
+.favorite-empty p{
+
+  font-size:15px;
+
+}

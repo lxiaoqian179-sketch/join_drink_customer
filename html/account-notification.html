@@ -101,11 +101,114 @@
         </div>
 
         <!-- 內容區 -->
-        <div class="account-layout__main">
-          <section class="account-content">
-            <h1>訊息通知</h1>
-            <p>這裡是「訊息通知」頁面內容，可替換為該頁的實際表單或資訊區塊。</p>
-          </section>
+        <!-- <div class="account-layout__main"> -->
+          <link rel="stylesheet" href="../css/pages/account-notification.css">
+
+<section class="account-content">
+
+<div class="notification-card">
+
+<h1 class="notification-title">訊息通知</h1>
+
+<!-- 分頁 -->
+<div class="notification-tabs">
+
+<button class="tab active">全部</button>
+<button class="tab">訂單通知</button>
+<button class="tab">系統通知</button>
+<button class="tab">優惠活動</button>
+
+</div>
+
+
+<!-- 通知列表 -->
+<div class="notification-list">
+
+<!-- 未讀通知 -->
+<div class="notification-item unread">
+
+<div class="notification-icon order">
+<i class="fa-solid fa-receipt"></i>
+</div>
+
+<div class="notification-content">
+<div class="notification-text">
+您的訂單 <b>#A146647716</b> 已完成，歡迎再次揪飲！
+</div>
+
+<div class="notification-time">
+5分鐘前
+</div>
+</div>
+
+</div>
+
+
+<!-- 系統通知 -->
+<div class="notification-item">
+
+<div class="notification-icon system">
+<i class="fa-solid fa-gear"></i>
+</div>
+
+<div class="notification-content">
+<div class="notification-text">
+您的帳戶資料已成功更新。
+</div>
+
+<div class="notification-time">
+今天 13:24
+</div>
+</div>
+
+</div>
+
+
+<!-- 優惠 -->
+<div class="notification-item">
+
+<div class="notification-icon promo">
+<i class="fa-solid fa-gift"></i>
+</div>
+
+<div class="notification-content">
+<div class="notification-text">
+恭喜！您獲得一張 <b>珍奶 $5 折價券</b>，今日內可使用。
+</div>
+
+<div class="notification-time">
+昨天
+</div>
+</div>
+
+</div>
+
+
+<!-- 系統 -->
+<div class="notification-item">
+
+<div class="notification-icon system">
+<i class="fa-solid fa-bell"></i>
+</div>
+
+<div class="notification-content">
+<div class="notification-text">
+平台已更新隱私權政策，請查看最新條款。
+</div>
+
+<div class="notification-time">
+2026 / 03 / 10
+</div>
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
         </div>
       </div>
     </div>
