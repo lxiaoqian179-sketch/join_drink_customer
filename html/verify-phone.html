@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>手機驗證</title>
+
+<link rel="stylesheet" href="../css/pages/verify-phone.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<header class="header">
+
+<div class="logo">
+  <img src="../images/logo.png" alt="JOIN 揪飲 LOGO" class="logo-img">
+</div>
+
+</header>
+
+
+
+<section class="verify-section">
+
+<div class="verify-card">
+
+<div class="verify-icon">
+<i class="fa-solid fa-mobile-screen"></i>
+</div>
+
+<h2>手機驗證</h2>
+
+<p class="verify-desc">
+我們已向您的手機
+<strong>+886 912 *** 456</strong><br>
+發送了一份 6 位數的驗證碼
+</p>
+
+
+<div class="otp-container">
+
+<input type="text" maxlength="1" class="otp">
+<input type="text" maxlength="1" class="otp">
+<input type="text" maxlength="1" class="otp">
+<input type="text" maxlength="1" class="otp">
+<input type="text" maxlength="1" class="otp">
+<input type="text" maxlength="1" class="otp">
+
+</div>
+
+
+
+<div class="timer">
+
+<div class="time-box">
+<span id="minutes">02</span>
+<p>分 MINUTES</p>
+</div>
+
+<span class="colon">:</span>
+
+<div class="time-box">
+<span id="seconds">00</span>
+<p>秒 SECONDS</p>
+</div>
+
+</div>
+
+
+
+<button class="verify-btn">
+完成驗證
+<i class="fa-solid fa-circle-check"></i>
+</button>
+
+
+
+<p class="resend">
+沒有收到驗證碼？
+<a href="#" id="resend-btn">重新發送</a>
+</p>
+
+
+<p class="back-login">
+<a href="login.html">
+<i class="fa-solid fa-arrow-left"></i>
+返回登入頁面
+</a>
+</p>
+
+</div>
+
+</section>
+
+
+
+<footer class="footer">
+
+© 2024 美食訂餐平台 版權所有
+
+</footer>
+
+
+<script src="../js/verify-phone.js"></script>
+
+</body>
+
+</html>

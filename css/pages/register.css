@@ -1,0 +1,342 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:"Noto Sans TC",sans-serif;
+background:#f6f6f6;
+color:#333;
+}
+
+
+
+/* header */
+
+.main-header{
+background:#fff;
+border-bottom:1px solid #eee;
+padding:12px 40px;
+}
+
+.header-inner{
+display:flex;
+justify-content:space-between;
+align-items:center;
+max-width:1200px;
+margin:auto;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo-icon{
+width:36px;
+height:36px;
+background:#0c3c34;
+color:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:6px;
+font-weight:bold;
+}
+
+.logo-text{
+font-weight:600;
+color:#ff6600;
+font-size:18px;
+}
+
+.logo-img {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+.header-login a{
+color:#ff6600;
+text-decoration:none;
+font-weight:600;
+margin-left:5px;
+}
+
+
+
+/* section */
+
+.register-section{
+display:flex;
+justify-content:center;
+align-items:center;
+padding:60px 20px;
+}
+
+
+
+/* card */
+
+.register-card{
+
+background:#fff;
+width:420px;
+
+padding:40px;
+
+border-radius:14px;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+text-align:center;
+
+}
+
+
+
+/* title */
+
+.register-title{
+font-size:26px;
+margin-bottom:8px;
+}
+
+.register-desc{
+color:#666;
+margin-bottom:30px;
+font-size:14px;
+}
+
+
+
+/* tabs */
+
+.register-tabs{
+display:flex;
+border-bottom:1px solid #eee;
+margin-bottom:20px;
+}
+
+.tab{
+flex:1;
+padding:10px;
+font-size:14px;
+cursor:pointer;
+color:#888;
+}
+
+.tab.active{
+color:#ff6600;
+border-bottom:2px solid #ff6600;
+font-weight:600;
+}
+
+
+
+/* form */
+
+.form-group{
+text-align:left;
+margin-bottom:18px;
+}
+
+.form-group label{
+font-size:13px;
+color:#333;
+margin-bottom:6px;
+display:block;
+}
+
+
+
+/* input */
+
+.input-box{
+
+display:flex;
+
+align-items:center;
+
+background:#f4f6f8;
+
+border-radius:8px;
+
+padding:10px 12px;
+
+gap:10px;
+
+}
+
+.input-box input{
+border:none;
+background:transparent;
+flex:1;
+outline:none;
+font-size:14px;
+}
+
+.input-box i{
+color:#9aa0a6;
+}
+
+.toggle-password{
+cursor:pointer;
+}
+
+
+
+/* button */
+
+.register-btn{
+
+width:100%;
+
+background:#ff5a00;
+
+border:none;
+
+padding:14px;
+
+color:#fff;
+
+font-size:16px;
+
+border-radius:10px;
+
+margin-top:10px;
+
+cursor:pointer;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:10px;
+
+}
+
+.register-btn:hover{
+background:#e94f00;
+}
+
+
+
+/* agree */
+
+.agree{
+margin-top:14px;
+font-size:12px;
+color:#666;
+text-align:left;
+}
+
+.agree a{
+color:#ff6600;
+text-decoration:none;
+}
+
+
+
+/* divider */
+
+.divider{
+
+margin:25px 0;
+
+display:flex;
+
+align-items:center;
+
+color:#aaa;
+
+font-size:12px;
+
+}
+
+.divider::before,
+.divider::after{
+
+content:"";
+
+flex:1;
+
+height:1px;
+
+background:#eee;
+
+margin:0 10px;
+
+}
+
+
+
+/* social */
+
+.social-login{
+display:flex;
+gap:15px;
+justify-content:center;
+}
+
+.social-btn{
+width:120px;
+height:40px;
+border:1px solid #eee;
+background:#fff;
+border-radius:8px;
+cursor:pointer;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.social-btn img{
+height:20px;
+}
+
+
+
+/* contact */
+
+.contact{
+margin-top:25px;
+font-size:13px;
+color:#666;
+}
+
+.contact a{
+color:#333;
+font-weight:600;
+text-decoration:none;
+}
+
+
+
+/* footer */
+
+.main-footer{
+margin-top:40px;
+padding:20px;
+text-align:center;
+font-size:13px;
+color:#888;
+background:#fafafa;
+}
+
+.footer-links{
+margin-top:10px;
+display:flex;
+justify-content:center;
+gap:20px;
+}
+
+.footer-links a{
+color:#666;
+text-decoration:none;
+font-size:13px;
+}
