@@ -1,0 +1,136 @@
+/* Store list page styles */
+
+/* ===== 店家區 ===== */
+
+.store-section{
+  padding:60px 0;
+  /* 左右留白應該交給 .container 控制。 */
+}
+
+.section-title{
+  font-size:24px;
+  margin-bottom:30px;
+}
+
+/* grid */
+
+.store-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+  margin:0 auto;
+      
+}
+.view-all-wrapper{
+  text-align:center;
+  margin-top:30px;
+}
+.view-all-btn{
+  display:inline-block;
+}
+
+
+.store-card{
+  background:#ebebeb;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 3px 10px rgba(0,0,0,0.06);
+  transition:all .25s ease;
+  cursor:pointer;
+  position:relative;
+}
+
+.store-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 10px 24px rgba(0,0,0,0.1);
+}
+
+.store-image{
+  position:relative;
+}
+
+.store-card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  display:block;
+}
+
+.store-badge{
+  position:absolute;
+  top:12px;
+  left:12px;
+  background:rgba(255,102,0,0.95);
+  color:#fff;
+  padding:5px 10px;
+  border-radius:12px;
+  font-size:12px;
+  font-weight:600;
+}
+
+.store-rating{
+  position:absolute;
+  bottom:12px;
+  left:12px;
+  background:rgba(255,255,255,0.95);
+  color:#222;
+  padding:6px 10px;
+  border-radius:14px;
+  font-size:12px;
+  font-weight:600;
+  display:flex;
+  align-items:center;
+  gap:6px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.store-rating i{
+  color:#ffbf00;
+}
+
+.store-rating span{
+  color:#666;
+  font-weight:400;
+}
+
+.store-info{
+  padding:14px;
+}
+
+.store-info h3{
+  font-size:16px;
+  margin-bottom:8px;
+}
+
+.store-meta{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  row-gap:4px;
+  flex-wrap:wrap;
+}
+
+.store-meta-left{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.meta-item{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-size:13px;
+  color:#666;
+}
+
+.store-flag{
+  background:#fff2e8;
+  color:#d85b00;
+  border:1px solid rgba(255,102,0,0.25);
+  padding:4px 10px;
+  border-radius:14px;
+  font-size:12px;
+  font-weight:600;
+}
