@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>我的訂單 | JOIN揪飲</title>
+
+<link rel="stylesheet" href="../css/pages/orders.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+
+<body>
+
+<!-- header -->
+
+<header class="header">
+
+<div class="logo">
+JOIN 揪飲
+</div>
+
+<div class="search-bar">
+<input type="text" placeholder="搜尋想喝的飲料、店家...">
+</div>
+
+<div class="header-icons">
+
+<i class="fa-regular fa-bell"></i>
+<i class="fa-solid fa-cart-shopping"></i>
+<i class="fa-regular fa-heart"></i>
+
+<button class="logout">登出</button>
+
+</div>
+
+</header>
+
+
+<!-- container -->
+
+<div class="container">
+
+<!-- title -->
+
+<div class="page-title">
+
+<h1>我的訂單</h1>
+<p>查看您過去所有的美味紀錄</p>
+
+</div>
+
+
+<!-- order type -->
+
+<div class="order-type">
+
+<button class="active">揪團訂單</button>
+<button>個人訂單</button>
+
+</div>
+
+
+<!-- order filter -->
+
+<div class="order-filter">
+
+<button class="active">全部訂單 (24)</button>
+<button>進行中 (1)</button>
+<button>已完成 (20)</button>
+<button>已取消 (3)</button>
+
+</div>
+
+
+<!-- order list -->
+
+<div class="order-grid">
+
+<!-- card -->
+
+<div class="order-card">
+
+<div class="order-image">
+
+<img src="../images/drink1.jpg">
+
+<span class="status completed">已完成</span>
+
+</div>
+
+<div class="order-body">
+
+<div class="order-header">
+
+<h3>迷客夏 Milksha</h3>
+
+<span class="price">$150</span>
+
+</div>
+
+<div class="order-time">
+
+<i class="fa-regular fa-calendar"></i>
+2023/10/24 14:30
+
+</div>
+
+<div class="order-items">
+
+<div>珍珠鮮奶茶 (L) <span>x2</span></div>
+<div>芋頭鮮奶 (M) <span>x1</span></div>
+
+</div>
+
+<button class="reorder">
+
+<i class="fa-solid fa-bars"></i>
+再次訂購
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- card -->
+
+<div class="order-card">
+
+<div class="order-image">
+
+<img src="../images/drink2.jpg">
+
+<span class="status completed">已完成</span>
+
+</div>
+
+<div class="order-body">
+
+<div class="order-header">
+
+<h3>可不可熟成紅茶</h3>
+
+<span class="price">$240</span>
+
+</div>
+
+<div class="order-time">
+
+<i class="fa-regular fa-calendar"></i>
+2023/10/20 10:15
+
+</div>
+
+<div class="order-items">
+
+<div>熟成紅茶 (L) <span>x4</span></div>
+<div>白玉歐蕾 (L) <span>x1</span></div>
+
+</div>
+
+<button class="reorder">
+
+<i class="fa-solid fa-bars"></i>
+再次訂購
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- card -->
+
+<div class="order-card">
+
+<div class="order-image">
+
+<img src="../images/drink3.jpg">
+
+<span class="status processing">進行中</span>
+
+</div>
+
+<div class="order-body">
+
+<div class="order-header">
+
+<h3>五十嵐 50 Lan</h3>
+
+<span class="price">$95</span>
+
+</div>
+
+<div class="order-time">
+
+<i class="fa-regular fa-calendar"></i>
+今天 16:45
+
+</div>
+
+<div class="order-items">
+
+<div>四季春青茶 (L) <span>x1</span></div>
+<div>波霸奶茶 (M) <span>x1</span></div>
+
+</div>
+
+<button class="processing-btn">
+
+<i class="fa-solid fa-hourglass-half"></i>
+訂單處理中
+
+</button>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<!-- pagination -->
+
+<div class="pagination">
+
+<button><</button>
+
+<button class="active">1</button>
+<button>2</button>
+<button>3</button>
+
+<span>...</span>
+
+<button>8</button>
+
+<button>></button>
+
+</div>
+
+</div>
+
+<script src="../js/pages/orders.js"></script>
+</body>
+</html>
